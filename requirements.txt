@@ -1,5 +1,5 @@
 # ============================================
-# Requirements для Mistral-7B QLoRA Fine-tuning
+# Requirements для Qwen2.5-3B QLoRA Fine-tuning
 # Шаг 2 (Fine-tuning) + Шаг 3 (Evaluation)
 # ============================================
 
