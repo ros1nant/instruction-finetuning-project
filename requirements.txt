@@ -1,0 +1,47 @@
+# ============================================
+# Requirements для Mistral-7B QLoRA Fine-tuning
+# Шаг 2 (Fine-tuning) + Шаг 3 (Evaluation)
+# ============================================
+
+# --- Основные ML библиотеки ---
+torch>=2.3.0                  # PyTorch (устанавливай отдельно с CUDA: https://pytorch.org/)
+transformers==4.44.0          # Hugging Face Transformers
+datasets==2.21.0              # Hugging Face Datasets
+accelerate==0.34.2            # Распределённое обучение
+
+# --- LoRA и QLoRA ---
+peft==0.12.0                  # Parameter-Efficient Fine-Tuning (LoRA/QLoRA)
+bitsandbytes==0.43.3          # 4-bit/8-bit квантизация
+
+# --- Тренер для SFT ---
+trl==0.10.1                   # Transformer Reinforcement Learning (SFTTrainer)
+
+# --- Оценка ---
+bert-score==0.3.13            # BERTScore метрика
+
+# --- Визуализация ---
+matplotlib==3.9.2             # Построение графиков
+pandas==2.2.2                 # Таблицы и CSV
+
+# --- Вспомогательные ---
+scipy==1.14.1                 # Научные вычисления (зависимость BERTScore)
+sentencepiece==0.2.0          # Токенизатор для Mistral
+protobuf==5.27.3              # Зависимость tokenizer
+tqdm==4.66.5                  # Прогресс-бары
+
+# ============================================
+# УСТАНОВКА:
+#
+# 1. Установи PyTorch с CUDA (замени cu121 на свою версию CUDA):
+#    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+#
+# 2. Установи остальные зависимости:
+#    pip install -r requirements.txt
+#
+# 3. Для Jupyter Notebook:
+#    pip install jupyter ipywidgets
+#    jupyter notebook
+#
+# ПРОВЕРКА CUDA:
+#    python -c "import torch; print(torch.cuda.is_available())"  # должно вернуть True
+# ============================================
